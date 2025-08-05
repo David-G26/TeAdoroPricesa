@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.carta-container {
+  width: 90%;
+  max-width: 700px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  border: 2px dashed #f39ac7;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+}
+
+.carta h1 {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: #ff66a3;
+  margin-bottom: 25px;
+  animation: heartbeat 2s infinite;
+}
+
+.carta p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  white-space: pre-line;
+  transition: all 0.3s ease;
+}
+
+.carta p:hover {
+  transform: scale(1.01);
+  color: #d94c7c;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Botón interactivo (opcional) */
+.boton-regreso {
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+}
+
+.boton-regreso a {
+  text-decoration: none;
+  background-color: #ff66a3;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-regreso a:hover {
+  background-color: #d94c7c;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .carta h1 {
+    font-size: 2.3rem;
+  }
+
+  .carta p {
+    font-size: 1rem;
+  }
+}

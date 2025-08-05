@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un abracito para vos</title>
+ <link href="Abracito.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="abrazo-container">
+    <h1>🤗 Un abracito para vos</h1>
+    <p class="mensaje">Este abrazo viene con garantía de ternura y un 99.9% de amor peruano incluido. ¿Lo aceptás? 🤭</p>
+
+    <div class="opciones">
+      <button class="btn" onclick="aceptarAbrazo()">Sí 🥺</button>
+      <button class="btn" onclick="rechazarAbrazo()">No 🙈</button>
+    </div>
+
+    <div id="mensaje-flotante" class="flotante">Igual te lo doy 😤</div>
+  </div>
+
+  <script>
+    function aceptarAbrazo() {
+      window.location.href = "https://hugs.company/hug/Dl3iNN9NnJ";
+    }
+
+    function rechazarAbrazo() {
+      const mensaje = document.getElementById("mensaje-flotante");
+      mensaje.classList.add("mostrar");
+
+      setTimeout(() => {
+        window.location.href = "https://hugs.company/hug/Dl3iNN9NnJ";
+      }, 2000); // 2 segundos antes de redirigir
+    }
+  </script>
+</body>
+</html>

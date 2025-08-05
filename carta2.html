@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carta para mi bb</title>
+  <link href="carta2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<audio id="bg-music" autoplay loop>
+  <source src="M-A-I.mp3" type="audio/mp3">
+</audio>
+
+<script>
+  const audio = document.getElementById('bg-music');
+  audio.volume = 0.01;
+
+  window.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    }
+  });
+</script>
+
+
+  <div class="carta-container">
+    <h1>Para mi pinsheshita 💌</h1>
+    <div id="carta" class="carta-text"></div>
+    <p id="firma" class="hidden">Siempre tuyo, David 💘</p>
+  </div>
+
+  <div class="corazones" id="corazones"></div>
+
+  <script src="carta2.js"></script>
+</body>
+</html>

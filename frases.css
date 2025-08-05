@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f5; /* fondo rosadito */
+  font-family: 'Dancing Script', cursive;
+  overflow: hidden;
+  position: relative;
+}
+
+.frase {
+  position: absolute;
+  color: #d63384; /* rosa fuerte */
+  font-size: 1.5rem;
+  pointer-events: none;
+  user-select: none;
+  opacity: 1;
+  animation: floatUp 3s ease-out forwards;
+  white-space: nowrap;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}

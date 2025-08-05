@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-image: url(https://es.pinterest.com/pin/655625658280509161/);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: #e91e63;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #ff69b4;
+}
+
+.hug-text {
+  margin-top: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  color: #ff8fab;
+  text-align: center;
+  padding: 0 10px;
+}
+
+
+.intro {
+  font-size: 1.2rem;
+  margin: 15px 0 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  background-color: #ffb6c1;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #ff69b4;
+  transform: scale}
