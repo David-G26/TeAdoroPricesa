@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mensajes Íntimos</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #330029, #a3003e);
+  color: #ffe6f0;
+  font-family: 'Courier Prime', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px 40px;
+  max-width: 600px;
+  box-shadow: 0 0 20px #ff4da6;
+  position: relative;
+}
+
+#text {
+  white-space: pre-wrap;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.07em;
+  display: inline-block;
+}
+
+.highlight {
+  color: #ff4da6;
+  font-weight: 700;
+}
+
+#ending {
+  margin-top: 25px;
+  font-style: italic;
+  font-size: 20px;
+  color: #ff85b8;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+/* Cursor parpadeante */
+#cursor {
+  display: inline-block;
+  background-color: #ff4da6;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+  vertical-align: bottom;
+  height: 1.2em;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+  <div id="container">
+    <div id="text"><span id="typing-text"></span><span id="cursor">|</span></div>
+    <div id="ending">Terminamos de hablar y al día siguiente te hiciste la <span class="highlight">LOQUITA</span>, como si no hubiera pasado nada...</div>
+  </div>
+
+  <script>
+    const story = `Esa noche en la que me contaste que estabas ovulando, sentí cómo cambió todo entre nosotros.  
+No pude evitar imaginar cada palabra, cada suspiro que no escribiste pero sentí en tus mensajes.  
+Me decías cosas que encendían mi mente, y yo solo quería hacerte sentir lo mismo, lo que tú me hacías sentir.  
+La conversación subió de tono sin que ninguno de los dos lo planeáramos, como si el deseo nos envolviera sin avisar.  
+Sentí que estabas ahí, cerca, y que cada frase era una caricia que recorría mi piel.  
+Quería demostrarte que lo que decíamos no era solo fantasía, que lo que sentía por ti era real y ardiente.  
+Y tú, con esa mezcla de timidez y atrevimiento, me hacías perder la cabeza.  
+Cada palabra tuya se quedó grabada en mi memoria, y me hizo desear que ese momento nunca terminara.  
+Terminamos de hablar y al día siguiente te hiciste la LOQUITA, como si no hubiera pasado nada...`;
+
+    const typingText = document.getElementById('typing-text');
+    const endingElement = document.getElementById('ending');
+    let i = 0;
+
+    function typeWriter() {
+      if (i < story.length) {
+        typingText.innerHTML += story.charAt(i);
+        i++;
+        setTimeout(typeWriter, 70);
+      } else {
+        endingElement.style.opacity = 1;
+        document.getElementById('cursor').style.display = 'none';
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frases Atrevidas</title>
+  <link rel="stylesheet" href="frases-calientes.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div id="frases-container"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const frases = [
+        "Quiero que tus manos me exploren sin prisa 😈🔥",
+        "Te imagino susurrándome al oído mientras me tocas 💋✨",
+        "Cada beso tuyo me enciende más 😏💦",
+        "Me pierdo en tus labios, no quiero salir jamás 😘🔥",
+        "Pienso en tu cuerpo pegado al mío… y me derrito 💕💋",
+        "Te deseo aquí, ahora, sin ropa… 😈💖",
+        "Tu voz me provoca cosas que no puedo explicar 🥵💫",
+        "No puedo dejar de pensar en lo que haríamos a solas 😏🔥",
+        "Quiero sentir tu respiración acelerada en mi cuello 💋💓",
+        "Me vuelves adict@ a ti, y no quiero cura 😈💦",
+        "Imagina nuestras manos explorando cada rincón 🔥💋",
+        "Tus gemidos serían mi música favorita 😏🎶",
+        "Quiero que no dejemos nada a la imaginación 💖💦",
+        "Deslízate sobre mí como si fuera tuyo 😈🔥",
+        "Tus caricias son el mejor veneno 💋💘",
+        "Muero por probarte entero/a 😏🍒",
+        "No podré dormir pensando en ti desnudo/a 💦💖",
+        "Tus labios saben al pecado que más me gusta 😈💋",
+        "Quiero perderme en tu piel toda la noche 🔥💕",
+        "Te deseo de una forma que asusta… y me encanta 😏💓"
+    ];
+
+    function mostrarFrase() {
+        const container = document.getElementById("frases-container");
+        const frase = document.createElement("div");
+        frase.classList.add("frase");
+
+        // Texto y posición aleatoria
+        frase.textContent = frases[Math.floor(Math.random() * frases.length)];
+        frase.style.left = Math.random() * 80 + "%";
+        frase.style.top = Math.random() * 80 + "%";
+
+        // Animación aleatoria
+        const animaciones = ["fadeUp", "fadeDown", "fadeLeft", "fadeRight", "zoomIn"];
+        frase.style.animation = animaciones[Math.floor(Math.random() * animaciones.length)] + " 3s ease forwards";
+
+        container.appendChild(frase);
+
+        // Eliminar después de 3 segundos
+        setTimeout(() => {
+            frase.remove();
+        }, 3000);
+    }
+
+    setInterval(mostrarFrase, 3500);
+});
+</script>
+
+</body>
+</html>
