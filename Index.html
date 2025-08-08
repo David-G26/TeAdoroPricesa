@@ -26,7 +26,22 @@
       <a href="carta2.html" class="btn">✏️ Carta mágica para ti</a>
       <a href="ramos.html" class="btn">🌹 Ramito</a>
       <a href="test.html" class="btn">📝 Encuestita para ti</a>
+      <a href="cositas.html" class="btn">📝 Cositas que me debes</a>
+
+      <!-- Botón secreto -->
+      <button id="secretBtn" class="btn">🌙 Zona privada</button>
     </div>
   </div>
+
+  <script>
+    document.getElementById("secretBtn").addEventListener("click", function() {
+      let pass = prompt("Introduce la contraseña:");
+      if(pass === "1417") {
+        window.location.href = "secreto.html";
+      } else {
+        alert("Contraseña incorrecta ❌");
+      }
+    });
+  </script>
 </body>
 </html>
